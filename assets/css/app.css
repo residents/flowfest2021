@@ -1,6 +1,7 @@
 *{
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
+
 body{
 	margin: 0px;
 	padding: 0px;
@@ -55,14 +56,14 @@ video {
 	position: absolute;
     left: 0;
     top: 0;
-    width: 1280px;
-    height: 768px;
+    width: 1920px;
+    height: 1080px;
 }
 #qrcodecontainer:before{
 	content: " ";
     position: absolute;
-    width: 1280px;
-    height: 768px;
+    width: 1920px;
+    height: 1080px;
     background-image: url(../images/fondo.png);
     background-size: cover;
     background-position: center;
@@ -81,6 +82,12 @@ video {
 	background-image: url(../images/fondo.png);
     background-size: auto;
     background-position: center;
+}
+.application, .application *{ 
+	overflow: hidden!important; 
+}
+.control, .control *{ 
+	overflow: auto!important; 
 }
 .control .btn{
 	font-size: 3rem!important;
