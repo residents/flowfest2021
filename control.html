@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Control Flow Fest</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body class="fondo control">
+		<div class="container my-5">
+			<div class="row justify-content-center my-5">
+				<div class="col-10 my-5">
+					<button type="button" class="btn btn-primary btn-block my-5 py-4" onclick="sendStep(2);">Iniciar juego!</button>
+				</div>
+			</div>
+			<div class="row justify-content-center my-5">
+				<div class="col-7 my-5">
+					<button type="button" class="btn btn-success btn-block py-4" onclick="sendReward(1);">Boleto!</button>
+				</div>
+			</div>
+			<div class="row justify-content-center my-5">
+				<div class="col-7 my-5">
+					<button type="button" class="btn btn-secondary btn-block py-4" onclick="sendReward(2);">Merch!</button>
+				</div>
+			</div>
+			<div class="row justify-content-center my-5">
+				<div class="col-7 my-5">
+					<button type="button" class="btn btn-danger btn-block py-4" onclick="sendReward(3);">Nada!</button>
+				</div>
+			</div>
+			<div class="row justify-content-center my-5">
+				<div class="col-10 my-5">
+					<button type="button" class="btn btn-primary btn-block my-5 py-4" onclick="sendStep(7);">Finalizar juego!</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+		  var socket = io();
+
+		  function sendStep(step){
+			    socket.emit('changeStep', step);
+			}
+
+			function sendReward(reward){
+			    socket.emit('selectReward', reward);
+			}
+
+		</script>
+	</body>
+</html>

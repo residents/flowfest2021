@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Entrega de premios - Flow Fest</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body class="fondo ">
+		<div class="container my-5">
+			<div class="row justify-content-center my-5">
+				<button type="button" class="col-4 btn btn-dark py-5 px-3" id="ok">Aceptar</button>
+				<p class="msg col-12 text-center py-5">ATENCION!</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var msgs = ['', 'BOLETO', 'MECH', 'NADA'];
+			var socket = io();
+			var lastCode = null;
+			var msg = null;
+			socket.on('showRewardWithCode', function(data) {
+				console.log('showRewardWithCode: ' + data);
+				if(lastCode != data.code){
+					lastCode = data.code;
+					showMsgReward(data.reward);
+				}
+			});
+
+			function showMsgReward(reward){
+				msg = msgs[reward];
+				$('#ok').show();
+				$('.msg').text(msg);
+				$('.msg').addClass('parpadea ' + msg);
+			}
+			$('#ok').off('click').on('click', function(){
+				$(this).hide();
+				$('.msg').text('ATENCION!');
+				$('.msg').removeClass('parpadea ' + msg);
+			});
+
+
+		</script>
+	</body>
+</html>

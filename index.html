@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<title>Coca cola - Flow Fest 2021</title>
+</head>
+	<body>
+
+		<div id="qrcodecontainer">
+			<div class="code"></div>
+		</div>
+
+		<!-- Step 1 Invitacion -->
+		<video id="A_Inv_1" class="video" src="videos/step1/A_Inv_1.mp4"></video>
+		<video id="A_Inv_2" class="video" src="videos/step1/A_Inv_2.mp4"></video>
+		<video id="A_Inv_3" class="video" src="videos/step1/A_Inv_3.mp4"></video>
+
+		<!-- Step 2 Instrucciones -->
+		<video id="B_Inst_1" class="video" src="videos/step2/B_Inst_1.mp4"></video>
+		<video id="B_Inst_2" class="video" src="videos/step2/B_Inst_2.mp4"></video>
+		<video id="B_Inst_3" class="video" src="videos/step2/B_Inst_3.mp4"></video>
+
+		<!-- Step 3 Practica -->
+
+			<!-- Facil -->
+			<video id="E_ExpReto1" class="video" src="videos/step3/Reto_1Facil/E_ExpReto1.mp4"></video>
+			<video id="E_DemoRe1" class="video" src="videos/step3/Reto_1Facil/E_DemoRe1.mp4"></video>
+			<video id="E_PPasos1R1" class="video" src="videos/step3/Reto_1Facil/E_PPasos1R1.mp4"></video>
+			<video id="E_PPasos2R1" class="video" src="videos/step3/Reto_1Facil/E_PPasos2R1.mp4"></video>
+			<!-- Intermedio -->
+			<video id="E_ExpReto2" class="video" src="videos/step3/Reto_2Intermedio/F_ExpReto2.mp4"></video>
+			<video id="E_DemoRe2" class="video" src="videos/step3/Reto_2Intermedio/F_DemoRe2.mp4"></video>
+			<video id="E_PPasos1R2" class="video" src="videos/step3/Reto_2Intermedio/F_PPasos1R2.mp4"></video>
+			<video id="E_PPasos2R2" class="video" src="videos/step3/Reto_2Intermedio/F_PPasos2R2.mp4"></video>
+			<!-- Dificil -->
+			<video id="E_ExpReto3" class="video" src="videos/step3/Reto_3Dificil/G_ExpReto3.mp4"></video>
+			<video id="E_DemoRe3" class="video" src="videos/step3/Reto_3Dificil/G_DemoRe3.mp4"></video>
+			<video id="E_PPasos1R3" class="video" src="videos/step3/Reto_3Dificil/G_PPasos1R3.mp4"></video>
+			<video id="E_PPasos2R3" class="video" src="videos/step3/Reto_3Dificil/G_PPasos2R3.mp4"></video>
+
+		<!-- Step 4 Retos -->
+		<video id="D_RReto1" class="video" src="videos/step4/D_RReto1.mp4"></video>
+		<video id="D_RReto2" class="video" src="videos/step4/D_RReto2.mp4"></video>
+		<video id="D_RReto3" class="video" src="videos/step4/D_RReto3.mp4"></video>
+
+		<!-- Step 5 Decision -->
+		<video id="C_Dec_1" class="video" src="videos/step5/C_Dec_1.mp4"></video>
+		<video id="C_Dec_2" class="video" src="videos/step5/C_Dec_2.mp4"></video>
+		<video id="C_Dec_3" class="video" src="videos/step5/C_Dec_3.mp4"></video>
+
+		<!-- Step 6 Resultado -->
+
+			<!-- Gana boleto -->
+			<video id="H_GanBol_1" class="video" src="videos/step6/boleto/H_GanBol_1.mp4"></video>
+			<video id="H_GanBol_2" class="video" src="videos/step6/boleto/H_GanBol_2.mp4"></video>
+			<video id="H_GanBol_3" class="video" src="videos/step6/boleto/H_GanBol_3.mp4"></video>
+			
+			<!-- Gana merch -->
+			<video id="I_GenMech_1" class="video" src="videos/step6/merch/I_GenMech_1.mp4"></video>
+			<video id="I_GenMech_2" class="video" src="videos/step6/merch/I_GenMech_2.mp4"></video>
+
+			<!-- No gana -->
+			<video id="J_NoGan_1" class="video" src="videos/step6/nada/J_NoGan_1.mp4"></video>
+			<video id="J_NoGan_2" class="video" src="videos/step6/nada/J_NoGan_2.mp4"></video>
+
+		<!-- Step 7 Despedida -->
+		<video id="K_Desp_1" class="video" src="videos/step7/K_Desp_1.mp4"></video>
+		<video id="K_Desp_2" class="video" src="videos/step7/K_Desp_2.mp4"></video>
+		<video id="K_Desp_3" class="video" src="videos/step7/K_Desp_3.mp4"></video>
+
+
+		<!-- <div class="camera-container"> -->
+			<video id="camera" class="camera"></video>
+			<canvas id="canvasCam"></canvas>
+		<!-- </div> -->
+
+		<div class="cortina">
+			<canvas id="canvas"></canvas>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
